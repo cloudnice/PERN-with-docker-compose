@@ -26,7 +26,7 @@ services:
       - mynet
 
   client:
-    # image: cloudnice/dockercompose-pern-client
+    # image: 
     build:
       context: /client/
       dockerfile: Dockerfile
