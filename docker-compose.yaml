@@ -4,7 +4,7 @@ services:
     build:
       context: /database/
       dockerfile: Dockerfile
-    # image: cloudnice/dockercompose-pern-db 
+    # image: 
     restart: always
     environment:
       POSTGRES_PASSWORD: "Pp123456789"
