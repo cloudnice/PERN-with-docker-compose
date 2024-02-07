@@ -13,7 +13,7 @@ services:
 
 
   server:
-    # image: cloudnice/dockercompose-pern-server 
+    # image: 
     build:
       context: /server/
       dockerfile: Dockerfile
