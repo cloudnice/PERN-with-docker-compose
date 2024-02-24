@@ -7,12 +7,12 @@ services:
     # image: cloudnice/alpine-postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: ./db_password.txt
-      # POSTGRES_PASSWORD: "Pp123456789"
+      # POSTGRES_PASSWORD: ./db_password.txt
+      POSTGRES_PASSWORD: "Pp123456789"
     networks:
       - mynet
-    volumes:
-      - myvolume:/var/lib/postgresql/data
+    # volumes:
+    #   - myvol:/var/lib/postgresql/data
 
 
   server:
@@ -45,9 +45,9 @@ networks:
   mynet:
     driver: bridge
 
-volumes:
-  myvolume:
+# volumes:
+#   myvol:
 
-secrets:
-  db_password:
-    file: ./db_password.txt
+# secrets:
+#   db_password:
+#     file: ./db_password.txt
