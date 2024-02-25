@@ -40,5 +40,9 @@ docker network ls
 ```bash
 docker-compose config <servis-adı>
 ```
+Dockerfile'ları kullanarak imajları yeniden derlemeyi sağlar. Bu, özellikle Dockerfile veya bağımlılıklarda değişiklik yapıldığında kullanışlıdır.
+```bash
+docker-compose up --build
+```
 
 
