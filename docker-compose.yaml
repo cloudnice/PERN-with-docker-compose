@@ -4,15 +4,15 @@ services:
     build:
       context: /database/ 
       dockerfile: Dockerfile
-    # image: cloudnice/alpine-postgres
+    # image: cloudnice/dockercompose-pern-database
     restart: always
     environment:
       # POSTGRES_PASSWORD: ./db_password.txt
       POSTGRES_PASSWORD: "Pp123456789"
     networks:
       - mynet
-    # volumes:
-    #   - myvol:/var/lib/postgresql/data
+    volumes:
+      - myvol:/var/lib/postgresql/data
 
 
   server:
@@ -29,7 +29,7 @@ services:
       - mynet
 
   client:
-    # image: cloudnice/dockercompose-pern-server
+    # image: cloudnice/dockercompose-pern-client 
     build:
       context: /client/
       dockerfile: Dockerfile
@@ -45,8 +45,8 @@ networks:
   mynet:
     driver: bridge
 
-# volumes:
-#   myvol:
+volumes:
+  myvol:
 
 # secrets:
 #   db_password:
