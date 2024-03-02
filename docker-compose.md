@@ -48,6 +48,6 @@ docker-compose up --build
 # olasi hataya sebeb olabilecek durumlar
 servislerin ayni user defined networkde olusturulmamalari sonucunda dns cozumlemesi olmayacak ve isimleri ile birbirleri ile baglanti kuramayacaklar
 uygulamalarin calisma portlari ve servislerin birbirlerine nasil nereden baglanacaklari iyice anlasilmali 
-imageda degisiklik yapildiginda image guncellenmeli, ```bash docker-compose up --build``` komutu ile image guncellenmeli
-eger eski volume silinmemis ise yeni ayaga kaldieilan yapinin datalari eski volume ile uyusmuyorsa database baglanmayacaktir.. boyle bir durumda ```bash docker-compose down -v``` komutu kullanilmali
+imageda degisiklik yapildiginda image guncellenmeli, ``` docker-compose up --build``` komutu ile image guncellenmeli
+eger eski volume silinmemis ise yeni ayaga kaldieilan yapinin datalari eski volume ile uyusmuyorsa database baglanmayacaktir.. boyle bir durumda ``` docker-compose down -v``` komutu kullanilmali
 
